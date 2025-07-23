@@ -3286,39 +3286,6 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # hostname = venus.yhd.com
 ^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig url reject
 
-# > 一汽大众
-# hostname = oneapp-api.faw-vw.com
-# 感谢【向晚】分享
-^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_(OPEN_SCREEN_ADS|CAR_ZHIHU_COLLEGE) url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows|activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags|evaluate\/getEvaluateCards)\/v1\?.* url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* url jsonjq-response-body '. = { returnStatus: "SUCCEED", hasMore: false, data: {} }'
-
-# > 一起考教师
-# hostname = api.17kjs.com
-# 开屏广告及题库广告 感谢【Jessire】分享
-^https?:\/\/api\.17kjs\.com\/meta\/ads_targets url reject
-
-# > 有兔阅读(米兔)
-# hostname = img.dailmo.com, img.allahall.com, app.zhoudamozi.com
-^https?:\/\/img\.dailmo\.com\/img\/61\/23c7125bfe6166d69f3bff5b0ca4d31e\.jpg url reject
-^https?:\/\/img\.dailmo\.com\/img\/50\/edb40c6392f848df37f9c31d8a6f90f6\.jpg url reject
-^https?:\/\/img\.dailmo\.com\/img\/6\/90585d9e96c73dd49644af57d8501624\.jpg url reject
-^https?:\/\/img\.dailmo\.com\/img\/5\/6cb2aa237ce1f65944aa1ecb29fbdeef\.jpg url reject
-^https?:\/\/img\.allahall\.com\/img\/61\/23c7125bfe6166d69f3bff5b0ca4d31e\.jpg url reject
-^https?:\/\/img\.allahall\.com\/img\/50\/edb40c6392f848df37f9c31d8a6f90f6\.jpg url reject
-^https?:\/\/img\.allahall\.com\/img\/6\/90585d9e96c73dd49644af57d8501624\.jpg url reject
-^https?:\/\/img\.allahall\.com\/img\/5\/6cb2aa237ce1f65944aa1ecb29fbdeef\.jpg url reject
-^https?:\/\/img\.allahall\.com\/img\/59\/6a13a75dfe46ebfdac96bd27ef098885\.jpg url reject
-^https?:\/\/app\.zhoudamozi\.com\/ad\/.+ url reject-200
-
-# > 雅虎
-# hostname = m.yap.yahoo.com
-^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject
-
 # > 印象笔记
 # hostname = app.yinxiang.com
 ^https?:\/\/app\.yinxiang\.com\/ads\/ url reject-200
