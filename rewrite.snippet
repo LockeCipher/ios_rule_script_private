@@ -707,12 +707,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # 误杀少 解决阿里系的开屏 目前测试咸鱼/钉钉 感谢【zzzzzz】分享
 ^https?:\/\/(gw|img)\.alicdn\.com\/imgextra\/.+\/[\w!]+\d+-\d+-.+-\b([8-9]\d{2,}|[1-9]\d{3,})\b-\b([5-9]\d{2,}|[1-9]\d{3,})\b url reject-dict
 
-# > 动画疯
-# hostname = api.gamer.com.tw
-^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/anime_get_question\.php url reject-dict
-# (黑屏25秒)
-^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js
-
 # > 滴滴出行
 # hostname = res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
 ^https?:\/\/hd\.xiaojukeji\.com\/d url reject-dict
@@ -748,33 +742,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 ^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-dict
 ^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade url reject-dict
 ^https?:\/\/www\.didapinche\.com\/app\/adstat\/ url reject-200
-
-# > 得物
-# hostname = app.dewu.com, cdn.poizon.com
-# 开屏广告 【Runestoner】分享
-^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement url reject
-^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg url reject-200
-
-# > 电E宝
-# hostname = app.95598pay.com
-^https?:\/\/app\.95598pay\.com\/debapi\/adsite\/ url reject-200
-
-# > 电视家
-# hostname = api.gaoqingdianshi.com, cdn.dianshihome.com
-^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ url reject
-^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ url reject
-
-# > 盯盯拍
-# hostname = *.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com
-^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* url reject
-^https?:\/\/api\.htp\.ad-scope\.com\.cn.* url reject
-^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* url reject
-^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* url reject
-^https?:\/\/apphw\.ddpai\.com:\d+\/onroad\/api\/v\d\/\w+\/list url reject-dict
-
-# > 电影猎手
-# hostname = app-v1.ecoliving168.com
-^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js
 
 
 
